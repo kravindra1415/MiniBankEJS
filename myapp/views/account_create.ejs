@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">    
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+     <!-- navbar -->
+      <%- include('header'); %> 
+    <form method="POST" action="/post_account">
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="text-center">Account Opening Form</h4>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <hr>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <label class="ml-2">Customer Name</label>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="surname first middle" name="customer_name" id="customer_name" required>
+                                </div>
+                                
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="ml-2">Date of Birth</label>
+                                <div class="form-group">
+                                    <input type="date" class="form-control" placeholder="enter date" name="dob" id="dob">
+                                </div>
+                            </div>                            
+                        </div>
+                                             
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="ml-2">Nationality</label>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="nationality" name="nationality" id="nationality">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="ml-3">Gender</label>
+                                <div class="form-group ml-2">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="genderRadio1" value="male">
+                                        <label class="form-check-label" for="inlineRadio1">male</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="genderRadio2" value="female">
+                                        <label class="form-check-label" for="inlineRadio2">female</label>
+                                      </div>
+                                      
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">                           
+                            
+                            <div class="col-md-6">
+                                <label class="ml-2">Pin Code</label>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="enter pin code" id="pin_code" name="pin_code">
+                                    </div>
+                            </div>
+
+                            <div class="col-md-6">
+                            <label class="ml-3">Identity Proof</label>
+                            <div class="form-group">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="idCheckbox1" name="ipp[]" value="Adahar Card">
+                                    <label class="form-check-label" for="inlineCheckbox1">Adahar card</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="idCheckbox2" name="ipp[]" value="Pan Card">
+                                    <label class="form-check-label" for="inlineCheckbox2">pan card</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="idCheckbox3" name="ipp[]" value="Election Card">
+                                    <label class="form-check-label" for="inlineCheckbox3">election card </label>
+                                  </div>
+                               </div>
+                            </div>
+                            
+
+                        </div>    
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="ml-2">Address</label>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="enter full address" value="Address" id="address" name="address">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="ml-2">Mobile Number</label>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="mobile number" id="mobile_number" name="mobile_number">
+                                </div>
+                            </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="ml-2">State</label>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="enter state" id="state" name="state">
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-6">
+                                    <form>
+                                        <div class="form-group">
+                                          <label for="exampleFormControlFile1">Photo Upload</label>
+                                          <input type="file" class="form-control-file" id="photo" name="photo">
+                                        </div>
+                                      </form>
+                                </div>
+    
+                                </div>    
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        
+                                        
+                                    </div>
+        
+        
+                                    </div>  
+
+
+                            <div class="form-group mt-2">
+                                <input type="submit" id="loginbutton" class="btn btn-outline-dark btn-block btn-lg" value="Submit">
+
+                            </form>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
