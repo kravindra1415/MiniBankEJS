@@ -50,7 +50,23 @@ app.get('/deposit',function(req,res){
         res.render('deposit');
         });
         
-    
+
+app.get('/fixed',function(req,res){
+    res.render('fixed')
+});
+   
+app.get('/transfer_money',function(req,res){
+    res.render('transfer_money')
+});
+
+app.get('/admin',function(req,res){
+    res.render('admin')
+})
+
+app.get('/customer',function(req,res){
+    res.render('customer')
+})
+
 app.post('/post_account', function(req,res){
 var customer_name = req.body.customer_name;
 var dob=req.body.dob;
